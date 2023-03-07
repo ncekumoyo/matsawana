@@ -1,0 +1,21 @@
+{
+    "inventory": [
+      { "id": 1, "name": "BBQ S National", "unit": "kg", "amount": 4 },
+      { "id": 2, "name": "Onion Powder", "unit": "kg", "amount": 6 },
+      { "id": 3, "name": "Traditional Boerewors", "unit": "kg", "amount": 5 },
+      { "id": 4, "name": "Six Gun", "unit": "kg", "amount": 2 },
+
+      { "id": 5, "name": "Chuck", "unit": "kg", "amount":  30},
+      { "id": 6, "name": "Short Rib", "unit": "kg", "amount":  2},
+      { "id": 7, "name": "Brisket", "unit": "kg", "amount":  0},
+      { "id": 8, "name": "Steak", "unit": "kg", "amount":  0},
+
+      { "id": 9, "name": "Carrots", "unit": "kg", "amount":  5},
+      { "id": 10, "name": "Tomatoes", "unit": "kg", "amount":  3},
+      { "id": 11, "name": "Onions", "unit": "kg", "amount":  3},
+
+      { "id": 12, "name": "Black Plastic", "unit": "", "amount":  3},
+      { "id": 13, "name": "Milky Plastic", "unit": "", "amount":  3}
+
+    ]
+  }
