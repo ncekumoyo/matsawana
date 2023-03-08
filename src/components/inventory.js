@@ -19,8 +19,11 @@ export default function Inventory() {
               <td>{x.amount}</td>
               <td>{x.unit}</td>
               <td>
-                <Link to={`/inventory/update/${x.id}`} className="btn btn-sm btn-warning">
+                <Link to={`/inventory/update/${x.id}`} className="btn btn-sm btn-warning me-2">
                   Update
+                </Link>
+                <Link to={`/inventory/delete/${x.id}`} className="btn btn-sm btn-danger me-2">
+                  Delete
                 </Link>
               </td>
             </tr>
@@ -36,9 +39,11 @@ export default function Inventory() {
     <section className="">
       <div className="container">
         <h2>Inventory</h2>
-        <Link to="/inventory/create" className="btn btn-sm btn-warning my-2">Add Item</Link>
+        <Link to="/inventory/create" className="btn btn-sm btn-warning my-2">
+          Add Item
+        </Link>
         <table className="table table-sm table-striped">
-          <thead>
+          <thead className="bg-warning">
             <tr>
               <th>Id</th>
               <th>Name</th>
