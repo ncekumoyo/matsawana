@@ -19,9 +19,9 @@ export default function Inventory() {
               <td>{x.amount}</td>
               <td>{x.unit}</td>
               <td>
-                <a href={`http://localhost:3002/inventory/${x.id}`} className="btn btn-small btn-warning">
-                  Detail
-                </a>
+                <Link to={`/inventory/update/${x.id}`} className="btn btn-sm btn-warning">
+                  Update
+                </Link>
               </td>
             </tr>
           ))

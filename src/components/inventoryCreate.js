@@ -50,7 +50,7 @@ export default function InventoryCreate(){
                     </div>
                     <div className="form-group mb-3">
                         <label htmlFor="">Amount</label>
-                        <input type="number" className="form-control" ref={amountRef}/>
+                        <input type="number" min="0" step="0.001" className="form-control" ref={amountRef}/>
                     </div>
                     <div className="form-group">
                         <button type="submit" className="btn btn-small btn-warning">Save</button>

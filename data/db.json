@@ -16,7 +16,7 @@
       "id": 3,
       "name": "Traditional Boerewors",
       "unit": "kg",
-      "amount": 5
+      "amount": "2"
     },
     {
       "id": 4,
@@ -34,7 +34,7 @@
       "id": 6,
       "name": "Short Rib",
       "unit": "kg",
-      "amount": 2
+      "amount": "3"
     },
     {
       "id": 7,
@@ -46,19 +46,19 @@
       "id": 8,
       "name": "Steak",
       "unit": "kg",
-      "amount": 0
+      "amount": "6"
     },
     {
       "id": 9,
       "name": "Carrots",
       "unit": "kg",
-      "amount": 5
+      "amount": "12"
     },
     {
       "id": 10,
       "name": "Tomatoes",
       "unit": "kg",
-      "amount": 3
+      "amount": "3.565"
     },
     {
       "id": 11,
@@ -68,21 +68,21 @@
     },
     {
       "id": 12,
-      "name": "Black Plastic",
-      "unit": "",
-      "amount": 3
+      "name": "Black Plastic (Checkers)",
+      "unit": "packs",
+      "amount": "3"
     },
     {
       "id": 13,
       "name": "Milky Plastic",
-      "unit": "",
-      "amount": 3
+      "unit": "packs",
+      "amount": "3"
     },
     {
+      "id": 14,
       "name": "Cooking Oil",
       "unit": "litres",
-      "amount": "4",
-      "id": 14
+      "amount": "6"
     }
   ]
 }
