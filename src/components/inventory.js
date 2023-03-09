@@ -22,6 +22,7 @@ export default function Inventory() {
                 <Link to={`/inventory/update/${x.id}`} className="btn btn-sm btn-warning me-2">
                   Update
                 </Link>
+                <Link to={`/inventory/quick-update/${x.id}`} className="btn btn-sm btn-success me-2">Quick Update</Link>
                 <Link to={`/inventory/delete/${x.id}`} className="btn btn-sm btn-danger me-2">
                   Delete
                 </Link>

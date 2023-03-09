@@ -10,7 +10,7 @@
       "id": 2,
       "name": "Onion Powder",
       "unit": "kg",
-      "amount": 6
+      "amount": 2
     },
     {
       "id": 3,
@@ -22,13 +22,13 @@
       "id": 4,
       "name": "Six Gun",
       "unit": "kg",
-      "amount": 2
+      "amount": 5
     },
     {
       "id": 5,
       "name": "Chuck",
       "unit": "kg",
-      "amount": 30
+      "amount": "20"
     },
     {
       "id": 6,
@@ -40,7 +40,7 @@
       "id": 7,
       "name": "Brisket",
       "unit": "kg",
-      "amount": 0
+      "amount": 15
     },
     {
       "id": 9,
@@ -52,7 +52,7 @@
       "id": 10,
       "name": "Tomatoes",
       "unit": "kg",
-      "amount": "3.565"
+      "amount": 54.13
     },
     {
       "id": 11,
