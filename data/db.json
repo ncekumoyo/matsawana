@@ -4,7 +4,7 @@
       "id": 2,
       "name": "Onion Powder",
       "unit": "kg",
-      "amount": 2
+      "amount": 3
     },
     {
       "id": 4,
@@ -47,6 +47,38 @@
       "name": "Cooking Oil",
       "unit": "litres",
       "amount": "6"
+    }
+  ],
+  "finance": [
+    {
+      "id": 1,
+      "date": "2023-03-09",
+      "sales": 1267,
+      "cardsales": 200,
+      "topaysales": {
+        "total": 0,
+        "detail": []
+      },
+      "expenses": {
+        "total": 0,
+        "detail": []
+      },
+      "cashinhand": 1067
+    },
+    {
+      "id": 2,
+      "date": "2023-03-10",
+      "sales": 2545,
+      "cardsales": 150,
+      "topaysales": {
+        "total": 0,
+        "detail": []
+      },
+      "expenses": {
+        "total": 70,
+        "detail": [{ "desc": "Atchaa", "amount": 70 }]
+      },
+      "cashinhand": 2325
     }
   ]
 }
