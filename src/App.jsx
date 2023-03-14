@@ -9,6 +9,7 @@ import InventoryUpdate from "./components/inventory/inventoryUpdate";
 import InventoryQuickUpdate from "./components/inventory/inventoryQuickUpdate";
 import InventoryDelete from "./components/inventory/inventoryDelete";
 import Finance from "./components/finance/finance";
+//import FinanceCreate from "./components/finance/financeCreate";
 
 function App() {
   return (

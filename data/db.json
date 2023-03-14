@@ -4,7 +4,7 @@
       "id": 2,
       "name": "Onion Powder",
       "unit": "kg",
-      "amount": 3
+      "amount": "4"
     },
     {
       "id": 4,
@@ -16,13 +16,13 @@
       "id": 9,
       "name": "Carrots",
       "unit": "kg",
-      "amount": "12"
+      "amount": 9
     },
     {
       "id": 10,
       "name": "Tomatoes",
       "unit": "kg",
-      "amount": 54.13
+      "amount": 57.13
     },
     {
       "id": 11,
@@ -34,19 +34,7 @@
       "id": 12,
       "name": "Black Plastic (Checkers)",
       "unit": "packs",
-      "amount": "3"
-    },
-    {
-      "id": 13,
-      "name": "Milky Plastic",
-      "unit": "packs",
-      "amount": "3"
-    },
-    {
-      "id": 14,
-      "name": "Cooking Oil",
-      "unit": "litres",
-      "amount": "6"
+      "amount": 2
     }
   ],
   "finance": [
@@ -76,7 +64,12 @@
       },
       "expenses": {
         "total": 70,
-        "detail": [{ "desc": "Atchaa", "amount": 70 }]
+        "detail": [
+          {
+            "desc": "Atchaa",
+            "amount": 70
+          }
+        ]
       },
       "cashinhand": 2325
     }

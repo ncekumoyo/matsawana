@@ -1,45 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import useFetch from "../../customhooks/useFetch";
 
 export default function Finance() {
-  const [items, setItems] = useState(null);
+  const { data, loading, error, doFetch } = useFetch("http://localhost:3002/finance");
 
   useEffect(() => {
-    fetch("http://localhost:3002/finance", {
-      method: "GET",
-      "Content-Type": "application/json",
-    })
-      .then((response) => response.json())
-      .then((data) =>
-        setItems(
-          data.map((x) => (
-            <tr key={x.id}>
-              <td>{x.id}</td>
-              <td>{x.date}</td>
-              <td className="text-end">{x.sales}</td>
-              <td className="text-end">{x.cardsales}</td>
-              <td className="text-end">{x.topaysales.total}</td>
-              <td className="text-end">{x.expenses.total}</td>
-              <td className="text-end">{x.cashinhand}</td>
-              <td>
-                <Link to={`/inventory/update/${x.id}`} className="btn btn-sm btn-warning me-2">
-                  Update
-                </Link>
-                <Link to={`/inventory/quick-update/${x.id}`} className="btn btn-sm btn-success me-2">
-                  Quick Update
-                </Link>
-                <Link to={`/inventory/delete/${x.id}`} className="btn btn-sm btn-danger me-2">
-                  Delete
-                </Link>
-              </td>
-            </tr>
-          ))
-        )
-      )
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);
+    doFetch();
+  }, [doFetch]);
 
   return (
     <section className="">
@@ -48,7 +16,7 @@ export default function Finance() {
         <Link to="/inventory/create" className="btn btn-sm btn-success my-2">
           Add Item
         </Link>
-        <table className="table table-sm table-striped table-bordered">
+        <table className="table table-sm table-striped table-bordered text-end">
           <thead className="bg-success text-light">
             <tr>
               <th>Id</th>
@@ -61,8 +29,35 @@ export default function Finance() {
               <th></th>
             </tr>
           </thead>
-          <tbody>{items}</tbody>
+          {data && (
+            <tbody>
+              {data.map((x) => (
+                <tr key={x.id}>
+                  <td>{x.id}</td>
+                  <td>{x.date}</td>
+                  <td>{x.sales}</td>
+                  <td>{x.cardsales}</td>
+                  <td>{x.topaysales.total}</td>
+                  <td>{x.expenses.total}</td>
+                  <td>{x.cashinhand}</td>
+                  <td className="text-center">
+                    <Link to={`/inventory/update/${x.id}`} className="btn btn-sm btn-warning me-2">
+                      Update
+                    </Link>
+                    <Link to={`/inventory/quick-update/${x.id}`} className="btn btn-sm btn-success me-2">
+                      Quick Update
+                    </Link>
+                    <Link to={`/inventory/delete/${x.id}`} className="btn btn-sm btn-danger me-2">
+                      Delete
+                    </Link>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          )}
         </table>
+        {loading && <p className="display-6 text-danger text-center p-3">...loading</p>}
+        {error && <p className="lead text-danger text-center fw-bold p-3">Something went wrong!!!</p>}
       </div>
     </section>
   );

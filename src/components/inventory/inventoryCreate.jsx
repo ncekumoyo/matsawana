@@ -1,40 +1,34 @@
-import { useCallback, useState, useRef, useEffect } from "react";
+import { useCallback, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import useFetch from "../../customhooks/useFetch";
 
 export default function InventoryCreate() {
-  const [item, setItem] = useState(null);
+  const { data, doFetch } = useFetch("http://localhost:3002/inventory");
   const nameRef = useRef("");
   const unitRef = useRef("");
   const amountRef = useRef(0);
   const navigate = useNavigate();
 
-  const handleSubmit = useCallback((e) => {
-    e.preventDefault();
-    setItem({
-      name: nameRef.current.value,
-      unit: unitRef.current.value,
-      amount: amountRef.current.value,
-    });
-  }, []);
+  const handleSubmit = useCallback(
+    (e) => {
+      e.preventDefault();
+      doFetch({
+        method: "POST",
+        body: JSON.stringify({
+          name: nameRef.current.value,
+          unit: unitRef.current.value,
+          amount: amountRef.current.value,
+        }),
+      });
+    },
+    [doFetch]
+  );
 
   useEffect(() => {
-    if (item) {
-      fetch("http://localhost:3002/inventory", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(item),
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          if (data) {
-            navigate("/");
-          }
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+    if (data) {
+      navigate("/");
     }
-  }, [item, navigate]);
+  }, [data, navigate]);
 
   return (
     <section className="">
