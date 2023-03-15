@@ -26,8 +26,8 @@ export default function Nav() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/">
-                Meat
+              <Link className="nav-link active" aria-current="page" to="/weights">
+                Weights
               </Link>
             </li>
             <li className="nav-item">
