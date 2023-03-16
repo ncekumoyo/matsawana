@@ -19,8 +19,13 @@ export default function Weights() {
         <table className="table table-sm table-striped text-end">
           <thead className="bg-primary">
             <tr>
-              <th className="text-start">Name</th>
-              <th>Weight(kg)</th>
+              <th>Date</th>
+              <th>Chuck</th>
+              <th>Short Ribs</th>
+              <th>Brisket</th>
+              <th>Steak</th>
+              <th>Boerewors</th>
+              <th>Chickens</th>
               <th></th>
             </tr>
           </thead>
@@ -28,8 +33,13 @@ export default function Weights() {
             <tbody>
               {data?.map((x) => (
                 <tr key={x.id}>
-                  <td className="text-start">{x.name}</td>
-                  <td>{x.weight}</td>
+                  <td>{x.date}</td>
+                  <td>{x.meat.chuck}</td>
+                  <td>{x.meat.shortrib}</td>
+                  <td>{x.meat.brisket}</td>
+                  <td>{x.meat.steak}</td>
+                  <td>{x.meat.boerewors}</td>
+                  <td>{x.meat.chicken}</td>
                   <td className="text-center">
                     <Link to={`/weights/update/${x.id}`} className="btn btn-sm btn-warning me-2">
                       Update

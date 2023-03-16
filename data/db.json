@@ -73,5 +73,29 @@
       },
       "cashinhand": 2325
     }
+  ],
+  "weights": [
+    {
+      "date": "2023-03-12",
+      "meat": {
+        "chuck": 4.895,
+        "shortrib": 7.255,
+        "brisket": 0,
+        "steak": 0,
+        "boerewors": 3.455,
+        "chicken": 3
+      }
+    },
+    {
+      "date": "2023-03-13",
+      "meat": {
+        "chuck": 2.445,
+        "shortrib": 5.665,
+        "brisket": 0,
+        "steak": 0,
+        "boerewors": 1.455,
+        "chicken": 2
+      }
+    }
   ]
 }
