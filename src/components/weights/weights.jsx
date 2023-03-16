@@ -13,11 +13,11 @@ export default function Weights() {
     <section className="">
       <div className="container">
         <h2>Weights </h2>
-        <Link to="/weights/create" className="btn btn-sm btn-primary my-2">
+        <Link to="/weights/create" className="btn btn-sm btn-dark my-2">
           Add Item
         </Link>
         <table className="table table-sm table-striped text-end">
-          <thead className="bg-primary">
+          <thead className="bg-dark text-light">
             <tr>
               <th>Date</th>
               <th>Chuck</th>
@@ -25,6 +25,7 @@ export default function Weights() {
               <th>Brisket</th>
               <th>Steak</th>
               <th>Boerewors</th>
+              <th>TOTAL (kg)</th>
               <th>Chickens</th>
               <th></th>
             </tr>
@@ -39,6 +40,15 @@ export default function Weights() {
                   <td>{x.meat.brisket}</td>
                   <td>{x.meat.steak}</td>
                   <td>{x.meat.boerewors}</td>
+                  <td className="lead fw-bold">
+                    {(
+                      Number(x.meat.chuck) +
+                      Number(x.meat.shortrib) +
+                      Number(x.meat.brisket) +
+                      Number(x.meat.steak) +
+                      Number(x.meat.boerewors)
+                    ).toFixed(3)}
+                  </td>
                   <td>{x.meat.chicken}</td>
                   <td className="text-center">
                     <Link to={`/weights/update/${x.id}`} className="btn btn-sm btn-warning me-2">
