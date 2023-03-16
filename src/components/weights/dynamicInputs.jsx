@@ -1,8 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-export default function DynamicInputs(props) {
+export default function DynamicInputs({ name, sum, setSum }) {
   const [weights, setWeights] = useState([0]);
-  const [sum, setSum] = useState(0);
 
   const add = () => {
     const values = [...weights];
@@ -14,17 +13,30 @@ export default function DynamicInputs(props) {
     const values = [...weights];
     values[index] = e.target.value;
     setWeights([...values]);
-    setSum((prev) => {
+  };
+
+  /* const handleFocus = (e) => {
+    if (e.target.value === "0") {
+      e.target.value = "";
+    }
+  }; */
+
+  useEffect(() => {
+    /* console.log(sum);
+    setSum(() => {
       let total = 0;
-      weights.map((x) => (total += Number(x)));
+      for (let i = 0; i < weights.length; i++) {
+        total += Number(weights[i]);
+      }
       return total;
     });
-  };
+    console.log(sum); */
+  }, []);
 
   return (
     <div className="form-group mb-3">
       <label className="fw-bold">
-        {props?.name} {sum} kg
+        {name} {sum} kg
       </label>
       <div className="d-flex">
         {weights.map((x, index) => (
@@ -38,7 +50,7 @@ export default function DynamicInputs(props) {
             value={x}
           />
         ))}
-        <button className="btn btn-sm btn-primary" onClick={add}>
+        <button type="button" className="btn btn-sm btn-primary" onClick={add}>
           Add
         </button>
       </div>

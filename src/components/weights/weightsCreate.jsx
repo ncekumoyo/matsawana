@@ -1,13 +1,11 @@
-import { useCallback, useRef, useEffect } from "react";
+import { useCallback, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import useFetch from "../../customhooks/useFetch";
 import DynamicInputs from "./dynamicInputs";
 
 export default function WeightsCreate() {
   const { data, doFetch } = useFetch("http://localhost:3002/weights");
-  const nameRef = useRef("");
-  const unitRef = useRef("");
-  const amountRef = useRef(0);
+  const [chuckSum, setChuckSum] = useState(0);
   const navigate = useNavigate();
 
   const handleSubmit = useCallback(
@@ -15,11 +13,7 @@ export default function WeightsCreate() {
       e.preventDefault();
       doFetch({
         method: "POST",
-        body: JSON.stringify({
-          name: nameRef.current.value,
-          unit: unitRef.current.value,
-          amount: amountRef.current.value,
-        }),
+        body: JSON.stringify({}),
       });
     },
     [doFetch]
@@ -36,7 +30,7 @@ export default function WeightsCreate() {
       <div className="container">
         <h2>Weights - Enter for today</h2>
         <form onSubmit={handleSubmit} className="col-md-6">
-          <DynamicInputs name="Chuck" />
+          <DynamicInputs name="Chuck" sum={chuckSum} setSum={setChuckSum} />
           <DynamicInputs name="Short Ribs" />
           <DynamicInputs name="Brisket" />
           <DynamicInputs name="Steak" />
