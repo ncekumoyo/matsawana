@@ -13,7 +13,7 @@ export default function Weights() {
     <section className="">
       <div className="container">
         <h2>Weights/Counts </h2>
-        <Link to="/weights/create" className="btn btn-sm btn-dark my-2">
+        <Link to="/weights/create" className="btn btn-sm btn-warning my-2">
           Add Item
         </Link>
         <table className="table table-sm table-striped text-end">

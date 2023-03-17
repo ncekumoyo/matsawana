@@ -13,19 +13,19 @@ export default function Finance() {
     <section className="">
       <div className="container">
         <h2>Finance</h2>
-        <Link to="/inventory/create" className="btn btn-sm btn-success my-2">
+        <Link to="/finance/create" className="btn btn-sm btn-success my-2">
           Add Item
         </Link>
-        <table className="table table-sm table-striped table-bordered text-end">
+        <table className="table table-sm table-striped text-end">
           <thead className="bg-success text-light">
             <tr>
-              <th>Id</th>
-              <th>Date</th>
+              <th className="text-start">Date</th>
               <th>Sales</th>
               <th>Card Sales</th>
               <th>To-Pay Sales</th>
               <th>Expenses</th>
               <th>Cash In Hand</th>
+              <th>Deficit</th>
               <th></th>
             </tr>
           </thead>
@@ -33,21 +33,18 @@ export default function Finance() {
             <tbody>
               {data.map((x) => (
                 <tr key={x.id}>
-                  <td>{x.id}</td>
-                  <td>{x.date}</td>
+                  <td className="text-start">{x.date}</td>
                   <td>{x.sales}</td>
                   <td>{x.cardsales}</td>
-                  <td>{x.topaysales.total}</td>
-                  <td>{x.expenses.total}</td>
-                  <td>{x.cashinhand}</td>
+                  <td>{x.topay}</td>
+                  <td>{x.expenses}</td>
+                  <td>{x.cash}</td>
+                  <td>{x?.deficit && <span className="text-danger fw-bold">R{x?.deficit}</span>}</td>
                   <td className="text-center">
-                    <Link to={`/inventory/update/${x.id}`} className="btn btn-sm btn-warning me-2">
+                    <Link to={`/finance/update/${x.id}`} className="btn btn-sm btn-warning me-2">
                       Update
                     </Link>
-                    <Link to={`/inventory/quick-update/${x.id}`} className="btn btn-sm btn-success me-2">
-                      Quick Update
-                    </Link>
-                    <Link to={`/inventory/delete/${x.id}`} className="btn btn-sm btn-danger me-2">
+                    <Link to={`/finance/delete/${x.id}`} className="btn btn-sm btn-danger me-2">
                       Delete
                     </Link>
                   </td>

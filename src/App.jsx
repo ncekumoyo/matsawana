@@ -8,11 +8,13 @@ import InventoryCreate from "./components/inventory/inventoryCreate";
 import InventoryUpdate from "./components/inventory/inventoryUpdate";
 import InventoryQuickUpdate from "./components/inventory/inventoryQuickUpdate";
 import InventoryDelete from "./components/inventory/inventoryDelete";
-import Finance from "./components/finance/finance";
 import Weights from "./components/weights/weights";
 import WeightsCreate from "./components/weights/weightsCreate";
 import WeightsDelete from "./components/weights/weightsDelete";
-//import FinanceCreate from "./components/finance/financeCreate";
+import Finance from "./components/finance/finance";
+import FinanceCreate from "./components/finance/financeCreate";
+import FinanceUpdate from "./components/finance/financeUpdate";
+import FinanceDelete from "./components/finance/financeDelete";
 
 function App() {
   return (
@@ -25,6 +27,9 @@ function App() {
         <Route path="/inventory/quick-update/:id" element={<InventoryQuickUpdate />} />
         <Route path="/inventory/delete/:id" element={<InventoryDelete />} />
         <Route path="/finance" element={<Finance />} />
+        <Route path="/finance/create" element={<FinanceCreate />} />
+        <Route path="/finance/update/:id" element={<FinanceUpdate />} />
+        <Route path="/finance/delete/:id" element={<FinanceDelete />} />
         <Route path="/weights" element={<Weights />} />
         <Route path="/weights/create" element={<WeightsCreate />} />
         <Route path="/weights/delete/:id" element={<WeightsDelete />} />
