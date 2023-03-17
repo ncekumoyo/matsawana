@@ -67,7 +67,7 @@ export default function WeightsCreate() {
             </div>
           </div>
           <div className="form-group">
-            <button type="submit" className="btn btn-small btn-warning">
+            <button type="submit" className="btn btn-small btn-dark">
               Save
             </button>
           </div>

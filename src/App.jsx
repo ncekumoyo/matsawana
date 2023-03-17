@@ -11,6 +11,7 @@ import InventoryDelete from "./components/inventory/inventoryDelete";
 import Finance from "./components/finance/finance";
 import Weights from "./components/weights/weights";
 import WeightsCreate from "./components/weights/weightsCreate";
+import WeightsDelete from "./components/weights/weightsDelete";
 //import FinanceCreate from "./components/finance/financeCreate";
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path="/finance" element={<Finance />} />
         <Route path="/weights" element={<Weights />} />
         <Route path="/weights/create" element={<WeightsCreate />} />
+        <Route path="/weights/delete/:id" element={<WeightsDelete />} />
       </Routes>
     </BrowserRouter>
   );

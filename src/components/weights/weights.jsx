@@ -12,14 +12,14 @@ export default function Weights() {
   return (
     <section className="">
       <div className="container">
-        <h2>Weights </h2>
+        <h2>Weights/Counts </h2>
         <Link to="/weights/create" className="btn btn-sm btn-dark my-2">
           Add Item
         </Link>
         <table className="table table-sm table-striped text-end">
           <thead className="bg-dark text-light">
             <tr>
-              <th>Date</th>
+              <th className="text-start">Date</th>
               <th>Chuck</th>
               <th>Short Ribs</th>
               <th>Brisket</th>
@@ -34,7 +34,7 @@ export default function Weights() {
             <tbody>
               {data?.map((x) => (
                 <tr key={x?.id}>
-                  <td>{x?.date}</td>
+                  <td className="text-start">{x?.date}</td>
                   <td>{x?.meat?.chuck}</td>
                   <td>{x?.meat?.shortrib}</td>
                   <td>{x?.meat?.brisket}</td>
@@ -51,12 +51,6 @@ export default function Weights() {
                   </td>
                   <td>{x?.meat?.chicken}</td>
                   <td className="text-center">
-                    <Link to={`/weights/update/${x?.id}`} className="btn btn-sm btn-warning me-2">
-                      Update
-                    </Link>
-                    <Link to={`/weights/quick-update/${x?.id}`} className="btn btn-sm btn-success me-2">
-                      Quick Update
-                    </Link>
                     <Link to={`/weights/delete/${x?.id}`} className="btn btn-sm btn-danger me-2">
                       Delete
                     </Link>

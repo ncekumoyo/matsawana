@@ -98,18 +98,6 @@
         "boerewors": 1.455,
         "chicken": 2
       }
-    },
-    {
-      "date": "2023-03-17",
-      "meat": {
-        "chuck": 7.59,
-        "shortrib": 7.545,
-        "brisket": 0,
-        "steak": 0,
-        "boerewors": 7.98,
-        "chicken": 4
-      },
-      "id": 3
     }
   ]
 }

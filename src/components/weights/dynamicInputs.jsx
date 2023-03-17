@@ -29,7 +29,7 @@ export default function DynamicInputs({ name, sum, setSum }) {
   };
 
   return (
-    <div className="form-group mb-3">
+    <div className="form-group mb-1">
       <label className="fw-bold">
         {name} {sum} kg
       </label>
@@ -46,7 +46,7 @@ export default function DynamicInputs({ name, sum, setSum }) {
             value={x}
           />
         ))}
-        <button type="button" className="btn btn-sm btn-primary" onClick={add}>
+        <button type="button" className="btn btn-sm btn-dark" onClick={add}>
           Add
         </button>
       </div>
