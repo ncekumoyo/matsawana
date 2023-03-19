@@ -2,8 +2,8 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import useFetch from "../../customhooks/useFetch";
 
-export default function Finance() {
-  const { data, loading, error, doFetch } = useFetch("http://localhost:3002/finance");
+export default function Sales() {
+  const { data, loading, error, doFetch } = useFetch("http://localhost:3002/sales");
 
   useEffect(() => {
     doFetch();
@@ -12,8 +12,8 @@ export default function Finance() {
   return (
     <section className="">
       <div className="container">
-        <h2>Finance</h2>
-        <Link to="/finance/create" className="btn btn-sm btn-success my-2">
+        <h2>Sales</h2>
+        <Link to="/sales/create" className="btn btn-sm btn-success my-2">
           Add Item
         </Link>
         <table className="table table-sm table-striped text-end">
@@ -41,12 +41,12 @@ export default function Finance() {
                   <td>{x.cash}</td>
                   <td>{x?.deficit && <span className="text-danger fw-bold">R{x?.deficit}</span>}</td>
                   <td className="text-center">
-                    <Link to={`/finance/update/${x.id}`} className="btn btn-sm btn-warning me-2">
+                    {/* <Link to={`/sales/update/${x.id}`} className="btn btn-sm btn-warning me-2">
                       Update
-                    </Link>
-                    <Link to={`/finance/delete/${x.id}`} className="btn btn-sm btn-danger me-2">
+                    </Link> 
+                    <Link to={`/sales/delete/${x.id}`} className="btn btn-sm btn-danger me-2">
                       Delete
-                    </Link>
+                    </Link>*/}
                   </td>
                 </tr>
               ))}

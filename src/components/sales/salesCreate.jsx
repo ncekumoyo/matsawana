@@ -2,8 +2,8 @@ import { useCallback, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import useFetch from "../../customhooks/useFetch";
 
-export default function FinanceCreate() {
-  const { data, doFetch } = useFetch("http://localhost:3002/finance");
+export default function SalesCreate() {
+  const { data, doFetch } = useFetch("http://localhost:3002/sales");
   const salesRef = useRef(0);
   const cardSalesRef = useRef(0);
   const toPayRef = useRef(0);
@@ -45,8 +45,8 @@ export default function FinanceCreate() {
   return (
     <section className="">
       <div className="container">
-        <h2>Finance - Create New Item</h2>
-        <form onSubmit={handleSubmit} className="col-md-6">
+        <h2>Sales - Enter new record</h2>
+        <form onSubmit={handleSubmit} className="col-sm-6 col-md-3">
           <div className="form-group mb-3">
             <label htmlFor="">Sales</label>
             <input

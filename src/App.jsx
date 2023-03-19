@@ -11,10 +11,10 @@ import InventoryDelete from "./components/inventory/inventoryDelete";
 import Weights from "./components/weights/weights";
 import WeightsCreate from "./components/weights/weightsCreate";
 import WeightsDelete from "./components/weights/weightsDelete";
-import Finance from "./components/finance/finance";
-import FinanceCreate from "./components/finance/financeCreate";
-import FinanceUpdate from "./components/finance/financeUpdate";
-import FinanceDelete from "./components/finance/financeDelete";
+import Sales from "./components/sales/sales";
+import SalesCreate from "./components/sales/salesCreate";
+import SalesUpdate from "./components/sales/salesUpdate";
+import SalesDelete from "./components/sales/salesDelete";
 
 function App() {
   return (
@@ -26,10 +26,10 @@ function App() {
         <Route path="/inventory/update/:id" element={<InventoryUpdate />} />
         <Route path="/inventory/quick-update/:id" element={<InventoryQuickUpdate />} />
         <Route path="/inventory/delete/:id" element={<InventoryDelete />} />
-        <Route path="/finance" element={<Finance />} />
-        <Route path="/finance/create" element={<FinanceCreate />} />
-        <Route path="/finance/update/:id" element={<FinanceUpdate />} />
-        <Route path="/finance/delete/:id" element={<FinanceDelete />} />
+        <Route path="/sales" element={<Sales />} />
+        <Route path="/sales/create" element={<SalesCreate />} />
+        <Route path="/sales/update/:id" element={<SalesUpdate />} />
+        <Route path="/sales/delete/:id" element={<SalesDelete />} />
         <Route path="/weights" element={<Weights />} />
         <Route path="/weights/create" element={<WeightsCreate />} />
         <Route path="/weights/delete/:id" element={<WeightsDelete />} />
